@@ -36,9 +36,11 @@ def remove_first_element_list(key):
 
 def set_value(key,value):
     REDIS.set(key,value)
-
+    return True
+    
 def set_value_expire(key,value,seconds):
     REDIS.set(key,value,ex=seconds)
+    return True
 
 def get_value(key):
     return REDIS.get(key)
